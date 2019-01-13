@@ -2,7 +2,6 @@ print("Enter the number:")
 n=int(input())
 s=str(n)
 l=len(s)
-
 def recursion_first(f1,st):
 	if f1!=0 :
 		return(recursion_first(f1-3,st)+","+st[(f1-2):(f1+1)])
