@@ -4,5 +4,4 @@ for i in s:
 	a=i.split(" ")
 	for j in a:
 		f+=j[0]
-
 	print(f)
