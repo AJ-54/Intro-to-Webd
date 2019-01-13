@@ -22,7 +22,7 @@ def recursion_third(k1,st):
 		return(st[(k1-3):(k1)])
 
 	else:
-		return()
+		return("")
 
 if l<=3:
 	print(l)
