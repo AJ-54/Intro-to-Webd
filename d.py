@@ -1,8 +1,7 @@
 a=int(input("Enter the first integer:"))
 b=int(input("Enter the second integer:"))
-arr1=[]
-arr2=[]
-arr=[]
+arr1,arr2,arr=[],[],[]
+
 for i in range(1,a):
 	if a%i==0:
 		arr1.append(i)
