@@ -7,5 +7,4 @@ for x in a:
 		d[x]=1
 	else:
 		d[x]+=1
-
 print(d)
