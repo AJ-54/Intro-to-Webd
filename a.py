@@ -8,6 +8,7 @@ print(sum)
 for i in range(1,num):
 	if i==1:
 		print(i)
+		
 	else:
 		sum=num1+num2
 		num1=num2
