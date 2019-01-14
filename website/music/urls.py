@@ -1,14 +1,9 @@
 from django.conf.urls import url
 from . import views
 
-app_name='music'
-
 urlpatterns = [
-    #/music/
-    url(r'^$',views.indexview.as_view(),name="index"),
-    #/music/712/
-    url(r'^(?P<pk>[0-9]+)/$' , views.detailview.as_view(), name='detail'),
-    #/music/album/add/
-    url(r'album/add/$',views.albumcreate.as_view(),name='album-add'),
-
+    # /music/
+    url(r'^$', views.index, name='index'),
+    # /music/71/
+    url(r'^(?P<album_id>[0-9]+)/$', views.detail, name='detail')
 ]

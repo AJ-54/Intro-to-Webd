@@ -1,22 +1,16 @@
-from django.views import generic
-from django.views.generic.edit import CreateView,UpdateView,DeleteView
+from django.http import Http404
+from django.shortcuts import render
 from .models import Album
 
 
-class indexview(generic.ListView):
-    template_name='music/index.html'
-    context_oblect_name='all_albums'
-
-    def get_queryset(self):
-        return Album.objects.all()
+def index(request):
+    all_albums = Album.objects.all()
+    return render(request, 'music/index.html',{'all_albums': all_albums})
 
 
-
-class detailview(generic.DetailView):
-    model=Album
-    template_name = 'music/detail.html'
-
-
-class albumcreate(CreateView):
-    model=Album
-    fields=['artist','artist_title','genre','album_logo']
+def detail(request, album_id):
+    try:
+        album = Album.objects.get(pk=album_id)
+    except Album.DoesNotExist:
+        raise Http404("Album does not exist")
+    return render(request, 'music/details.html', {'album': album})
