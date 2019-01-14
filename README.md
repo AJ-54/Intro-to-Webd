@@ -1,2 +1,2 @@
 # Intro-to-Webd
-Django video watched till 29.
+Django video watched till 20.
